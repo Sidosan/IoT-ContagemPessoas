@@ -1,13 +1,15 @@
 # Servidor IoT-Debian com Docker Compose=> VerneMQ e MongoDB
 
-Após analise da necessidade do projeto e pensando na escalabelidade, o servidor IoT foi planejado com a ferramenta Dock como gerenciador e facilitador da escalabilidade. 
+Após analise da necessidade do projeto e pensando na escalabilidade, o servidor IoT foi planejado com a ferramenta Dock como gerenciador e facilitador da escalabilidade. 
 
 Usei 2 imagens dentro do Docker Compose, VerneMQ(Broker MQTT) e MongoDB(Banco de Dados).
 
 Nesse artigo vou descrever o passa a passo das instações e configuração até o momento(07/09/2020).
 
 
-## Instalação do Linux Debian 10.5:
+## Instalação do Linux:
+
+A versão ultilizada é o Debian 10.5(buster).
 
 A principal configuração para rodar corretamente o Docker é a partição.
 Deveremos Escolher a opção “Partição /home separada”:
@@ -136,11 +138,44 @@ Se não conseguir, senta e chora novamente...
 Brincadeira! tente outro repositorio.
 
 ## Configurar o VerneMQ by Docker:
-Pra voce configurar o VerneMQ e outros programa no docker, existe varios meios, eu fiz por scripts .YAML.
+Pra voce configurar o VerneMQ e outros programa no docker, existe varios meios, eu fiz por scripts .YAML
 
-Por que eu fiz isso ao invez de linha de comando?! 
+Porque eu fiz isso ao invez de linha de comando?! 
 
 Não sei, sou idiota que vai no caminho mais dificil.
+
+Basicamente esse primeiro arquivo configura:([Clique aqui](https://github.com/Sidosan/IoT-ContagemPessoas/blob/master/stack-v1.yaml))
+- porta 1883 e 8888 para uso do VerneMQ
+- ativa VerneMQ para uso do docker
+- aceita clientes anonimos.
+
+Para subir o arquivo ultilize o comando:
+
+``docker-compose -f stack-v1.yaml up``
+
+**Teste o Broker:**
+
+Usei 2 programa Brokers Clientes:
+
+-MQTT BOX (http://workswithweb.com/mqttbox.html)
+
+-MQTT Explorer (http://mqtt-explorer.com/)
+
+Também testei aplicativos Android.
+
+Pegue o IP da maquina ou se estive rodando em uma maquina local é só inserir:
+``localhost:1883``
+
+Exemplo IP externo:
+``192.168.xx.xx:1883``
+
+Como não temos nenhuma autentificação vai conseguir se conectar facilmente.
+
+Agora é só Brincar com o MQTT!
+
+
+
+
 
 
 
