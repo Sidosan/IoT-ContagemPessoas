@@ -149,7 +149,7 @@ Basicamente esse primeiro arquivo configura:([Clique aqui](https://github.com/Si
 - ativa VerneMQ para uso do docker
 - aceita clientes anonimos.
 
-Para subir o arquivo ultilize o comando:
+Para subir o arquivo utilize o comando:
 
 ``docker-compose -f stack-v1.yaml up``
 
