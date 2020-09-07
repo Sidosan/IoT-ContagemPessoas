@@ -155,7 +155,7 @@ Para subir o arquivo utilize o comando:
 
 **Teste o Broker:**
 
-Usei 2 programa Brokers Clientes:
+Usei 2 programas para Brokers Clientes:
 
 -MQTT BOX (http://workswithweb.com/mqttbox.html)
 
