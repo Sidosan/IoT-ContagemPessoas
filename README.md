@@ -12,7 +12,9 @@ Nesse artigo vou descrever o passa a passo das instações e configuração até
 A versão ultilizada é o Debian 10.5(buster).
 
 A principal configuração para rodar corretamente o Docker é a partição.
+
 Deveremos Escolher a opção “Partição /home separada”:
+
 <img src=https://servidordebian.org/_media/pt/buster/install/12-part-3.png>
 
 
