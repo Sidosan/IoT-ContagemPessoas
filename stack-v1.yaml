@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+ vernemq:
+  image: vernemq/vernemq
+  restart: always
+  ports:
+   - "1883:1883"
+   - "8888:8888"
+  environment:
+   DOCKER_VERNEMQ_ACCEPT_EULA: "yes"
+   DOCKER_VERNEMQ_ALLOW_ANONYMOUS: "on"
