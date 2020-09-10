@@ -17,6 +17,10 @@ Deveremos Escolher a opção “Partição /home separada”:
 
 <img src=https://servidordebian.org/_media/pt/buster/install/12-part-3.png>
 
+#SSH
+
+Se voce estiver em uma MV como eu, instale SSH e PuTTY para copiar/colar o código facilmente.
+
 
 ## Instalação do Docker:
 
