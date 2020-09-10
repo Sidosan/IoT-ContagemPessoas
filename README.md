@@ -17,10 +17,23 @@ Deveremos Escolher a opção “Partição /home separada”:
 
 <img src=https://servidordebian.org/_media/pt/buster/install/12-part-3.png>
 
+Se necessario criar usuario, normalmente, usamos o comando ‘adduser’ para criar novos usuários, como abaixo.
+
+sudo adduser {digite-nome-usuario}
+
+Se você quiser que o usuário recém-criado execute qualquer tarefa administrativa com o sudo, basta adicioná-lo ao grupo sudo usando o comando:
+
+``sudo usermod -a -G sudo {digite-nome-usuario}``
+
+O comando acima fará com que o usuário seja o membro do grupo sudo.
+
+Você pode usar este comando também para adicionar os usuários ao grupo sudo.
+
+``sudo adduser {digite-nome-usuario} sudo``
+
 ### SSH:
 
 Se voce estiver em uma MV como eu, instale SSH e PuTTY para copiar/colar o código facilmente.
-
 
 ## Instalação do Docker:
 
@@ -30,9 +43,10 @@ Primeiro, atualize sua lista existente de pacotes:
 
 ``$ sudo apt update``
 
-Em seguida, instale alguns pacotes de pré-requisitos que permitem aptusar pacotes sobre HTTPS:
+Em seguida, instale alguns pacotes de pré-requisitos que permitem apt-get pacotes sobre HTTPS:
 
-sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+``sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common``
+
 Em seguida, adicione a chave GPG para o repositório oficial do Docker ao seu sistema:
 
 ``$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -``
