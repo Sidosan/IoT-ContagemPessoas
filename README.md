@@ -35,6 +35,12 @@ Você pode usar este comando também para adicionar os usuários ao grupo sudo.
 
 Se voce estiver em uma MV como eu, instale SSH e PuTTY para copiar/colar o código facilmente.
 
+### IP:
+
+para descobrir qual IP foi gerado para sua maquina:
+
+```hostname -I``
+
 ## Instalação do Docker:
 
 O pacote de instalação do Docker disponível no repositório oficial do Debian pode não ser a versão mais recente. Para garantir que recebamos a versão mais recente, instalaremos o Docker a partir do repositório oficial do Docker. Para fazer isso, adicionaremos uma nova fonte de pacote, adicionaremos a chave GPG do Docker para garantir que os downloads sejam válidos e, em seguida, instalaremos o pacote.
